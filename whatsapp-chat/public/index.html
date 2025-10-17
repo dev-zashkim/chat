@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ZashChat Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <header>
+        <img src="assets/logo.png" alt="logo" class="logo">
+        <h2>ZashChat</h2>
+      </header>
+
+      <div class="user-section">
+        <input type="text" id="username" placeholder="Enter your name..." autocomplete="off">
+        <button id="join">Join</button>
+      </div>
+
+      <div class="users">
+        <h3>Online Users</h3>
+        <ul id="user-list"></ul>
+      </div>
+    </aside>
+
+    <main class="chat-area">
+      <div class="chat-header">Group Chat</div>
+      <div class="messages" id="chat-box"></div>
+      <div class="chat-input">
+        <input type="text" id="msg" placeholder="Type message...">
+        <button id="send">Send</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
